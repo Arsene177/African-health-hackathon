@@ -1,0 +1,51 @@
+.fcontain {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .followUpContainer {
+    flex: 1;
+    margin-right: 20px;
+    max-width: 50%;
+  }
+  
+  .followUpBox {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .symptoms {
+    flex: 1;
+    padding: 20px;
+    max-width: 50%;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .symptoms .MuiTextField-root {
+    margin-bottom: 15px;
+  }
+  
+  .symptoms .MuiRating-root {
+    margin-left: 10px;
+  }
+  
+  .symptoms button {
+    margin-top: 10px;
+  }
+  
+  button,
+  .fab {
+    margin-top: 10px;
+  }
+  
+  .MuiFab-root {
+    margin-right: 10px;
+  }
+  

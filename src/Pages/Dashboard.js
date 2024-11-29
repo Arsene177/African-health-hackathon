@@ -11,6 +11,14 @@ const Dashboard = () => {
   const [newAppointment, setNewAppointment] = useState({ patient: '', date: '', time: '', status: 'Pending' });
   const [editAppointment, setEditAppointment] = useState(null);
 
+  const [externalAppointment, setExternalAppointment] = useState({
+    patient: '',
+    hospital: '',
+    specialist: '',
+    date: '',
+    time: '',
+  });
+
   const handleAdd = () => {
     setAppointments([...appointments, { ...newAppointment, id: Date.now() }]);
     setNewAppointment({ patient: '', date: '', time: '', status: 'Pending' });
@@ -40,9 +48,15 @@ const Dashboard = () => {
     }));
   };
 
+  const handleBookExternalAppointment = () => {
+    console.log('External Appointment Booked:', externalAppointment);
+    // Reset external appointment form
+    setExternalAppointment({ patient: '', hospital: '', specialist: '', date: '', time: '' });
+  };
+
   return (
     <div className="dashboard-container">
-      <Dnav/>
+      <Dnav />
       <h1>Doctor's Appointments</h1>
 
       <h3>Add New Appointment</h3>
@@ -87,6 +101,39 @@ const Dashboard = () => {
           <button onClick={() => setEditAppointment(null)}>Cancel</button>
         </div>
       )}
+
+      <h3>Book External Appointment</h3>
+      <input
+        type="text"
+        placeholder="Patient Name"
+        value={externalAppointment.patient}
+        onChange={(e) => setExternalAppointment({ ...externalAppointment, patient: e.target.value })}
+      />
+      <input
+        type="text"
+        placeholder="Hospital"
+        value={externalAppointment.hospital}
+        onChange={(e) => setExternalAppointment({ ...externalAppointment, hospital: e.target.value })}
+      />
+      <input
+        type="text"
+        placeholder="Specialist"
+        value={externalAppointment.specialist}
+        onChange={(e) => setExternalAppointment({ ...externalAppointment, specialist: e.target.value })}
+      />
+      <input
+        type="date"
+        value={externalAppointment.date}
+        onChange={(e) => setExternalAppointment({ ...externalAppointment, date: e.target.value })}
+      />
+      <input
+        type="time"
+        value={externalAppointment.time}
+        onChange={(e) => setExternalAppointment({ ...externalAppointment, time: e.target.value })}
+      />
+      <button className="add-appointment-btn" onClick={handleBookExternalAppointment}>
+        Book External Appointment
+      </button>
 
       <table className="appointment-table">
         <thead>

@@ -39,8 +39,11 @@ const Profile = () => {
     };
 
     return (
+        <>
+        <Dnav />
+       
         <div style={styles.pageWrapper}>
-            <Dnav />
+            
             <div style={styles.container}>
                 {/* Doctor's Profile Section */}
                 <div style={styles.profileSection}>
@@ -84,6 +87,7 @@ const Profile = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

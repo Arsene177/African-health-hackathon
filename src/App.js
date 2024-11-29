@@ -12,6 +12,8 @@ import Welcome from './Pages/Doctor.js';
 import Patient from './Pages/Patient.js';
 import Dossier from './Components/Dossier.js';
 import Profile from './Pages/Profile.js';
+import FollowUp from "./Pages/FollowUp.jsx";
+import DonatePage from './Pages/Donate.js';
 
 
 
@@ -20,6 +22,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" exact Component={AboutUs} />
+        <Route path="/Donate" exact Component={DonatePage} />
         <Route path="/RegisterPatient" exact Component={PatientMedicalBooklet} />
         <Route path="/About" exact Component={AboutUs} />
         <Route path="/Dashbord" exact Component={Dashboard} />
@@ -30,6 +33,7 @@ const App = () => {
         <Route path="/Patient" exact Component={Patient} />
         <Route path="/dossier" exact Component={Dossier} />
         <Route path="/profile" exact Component={Profile} />
+        <Route path="/followUp" exact Component={FollowUp} />
       </Routes>
     </Router>
   );

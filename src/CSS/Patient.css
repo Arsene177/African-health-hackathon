@@ -149,3 +149,11 @@ textarea {
       margin-bottom: 20px;
   }
 }
+
+/* Set the size of the map to be smaller */
+#map {
+  height: 300px;  /* Smaller height */
+  width: 400px;   /* Smaller width */
+  margin: 20px auto; /* Center the map on the page with some space around it */
+  border: 2px solid #ccc; /* Optional: Add a border around the map */
+}

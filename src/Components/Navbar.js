@@ -6,8 +6,11 @@ const Navbar = () => {
     return(
         <div className="navbar">
             <NavLink to="/" activeClassName="active">Accueil</NavLink>
-            <NavLink to="/registration">Forums</NavLink>
+            <NavLink to="/registration">Register Doctor</NavLink>
             <NavLink to="/Login">Login</NavLink>
+            <NavLink to="/Donate">Donate</NavLink>
+            
+            
         </div>
     )
 }
